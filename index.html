@@ -223,17 +223,27 @@
     <br>
 <footer><p style="text-align:center; font-size: larger;">We would like to thank our brothers XCoder, WizNon, Ksr and the rest of the WizTeam and ourselves "FREEMASONRY" for creating these amazing tools.</p>
 </footer></footer></body></html>
-  <script>
-    window.onload = function() {
-      const videos = document.querySelectorAll('video');
-      videos.forEach(video => {
-        const videoId = video.getAttribute('id');
-        const viewCount = localStorage.getItem(videoId);
-        if (viewCount) {
-          document.getElementById(videoId + "-views").innerText = viewCount;
-        }
-      });
+<script>
+  function handlePlay(videoId) {
+    let viewCount = localStorage.getItem(videoId);
+    if (!viewCount) {
+      viewCount = 0;
     }
-  </script>
+    viewCount++;
+    localStorage.setItem(videoId, viewCount);
+    updateViewCount();
+  }
+  function updateViewCount() {
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+      const videoId = video.getAttribute('id');
+      const viewCount = localStorage.getItem(videoId);
+      if (viewCount) {
+        document.getElementById(videoId + "-views").innerText = viewCount;
+      }
+    });
+  }
+  window.onload = updateViewCount;
+</script>
 </body>
 </html>
