@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i.pinimg.com/originals/42/65/fa/4265fac922a120196162b71e68d32b47.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: transparent; 
+            -webkit-background-clip: text; 
+            background-clip: text;
+            text-align: center;
+            padding-top: 100px;
+            animation: glitch 1s infinite alternate-reverse; 
+        }
+        @keyframes glitch {
+            0% {
+                transform: translateY(0);
+                filter: blur(0);
+            }
+            25% {
+                transform: translateY(-3px);
+                filter: blur(0);
+            }
+            50% {
+                transform: translateY(3px);
+                filter: blur(0);
+            }
+            75% {
+                transform: translateY(0);
+                filter: blur(0);
+            }
+            100% {
+                transform: translateY(0);
+                filter: blur(0.3em);
+            }
+        }
+        h1 {
+            color: transparent;
+            font-size: 36px;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+        p {
+            line-height: 1.6;
+            font-size: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        ul li a:hover {
+            color: #0056b3;
+        }
+        .profile-img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 5px solid #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn.discordapp.com/attachments/1178416273625989181/1219263529174175774/e30ec57c55095d17177a20857ce5599f.png?ex=660aaaa6&is=65f835a6&hm=d4bdda6475d6d91017189ffca7631b3e0bb4ebbb7e7a2685458e0f2c9d37c932&" alt="Profile Image" class="profile-img">
+        <h1><span style="font-family: 'Courier New', monospace; color: #ffffff;">93B</span></h1>
+        <p><span style="font-family: 'Courier New', monospace; color: #ffffff;">Welcome to my About</span></p>
+        <p><span style="font-family: 'Courier New', monospace; color: #ffffff;">You can connect with me on social me</span></p>
+        <ul>
+            <li><a href="https://discord.com/users/333363258360725505">Discord</a></li>
+            <li><a href="https://www.instagram.com/d1zw_">Instagram</a></li>
+        </ul>
+    </div>
+</body>
+</html>
