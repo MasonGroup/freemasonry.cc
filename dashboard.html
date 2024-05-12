@@ -46,14 +46,14 @@
     cursor: pointer
 }
 
-.generate {
+.Discord {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%)
 }
 
-.generate button {
+.Discord button {
     background-color: transparent;
     border: none;
     outline: none;
@@ -67,13 +67,13 @@
     transition: all .5s ease
 }
 
-.generate button:hover {
+.Discord button:hover {
     color: #f8f8f2;
     filter: drop-shadow(0 0 20px #f8f8f2);
     cursor: pointer
 }
 
-.generate input {
+.Discord input {
     background-color: transparent;
     outline: none;
     color: #bd93f9;
@@ -86,12 +86,12 @@
     transition: all .5s ease
 }
 
-.generate input::placeholder {
+.Discord input::placeholder {
     color: #bd93f980;
     opacity: .85
 }
 
-.generate input:hover {
+.Discord input:hover {
     color: #f8f8f2;
     filter: drop-shadow(0 0 20px #f8f8f2);
     cursor: pointer
@@ -163,10 +163,10 @@
         <div class="container">
             <p id="copy-content"></p>
         </div>
-        <div class="generate" style="text-align: center;">
-            <button id="generate" style="font-size: 36px;"><strong>www.freemasonry.cc</strong></button>
+        <div class="Discord" style="text-align: center;">
+            <button id="Discord" style="font-size: 36px;"><strong>www.freemasonry.cc</strong></button>
             <script>
-            document.getElementById("generate").onclick = function() {
+            document.getElementById("Discord").onclick = function() {
                 window.open("https://discord.gg/6yGJdgAqAW", "_blank");
             };
             </script>            
