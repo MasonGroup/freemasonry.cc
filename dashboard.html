@@ -1,107 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/MasonGroup/masongroup.github.io/main/Freemasonry.ico?token=GHSAT0AAAAAACOMMXWAN3B7EVJ2WX4XPHJ4ZPMFIDA">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Freemasonry</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; 
-        }
-        .navbar {
-            position: relative;
-            width: 100%;
-            height: 60px; 
-            z-index: 1000;
-            overflow: hidden;
-            background-image: url('https://i.ibb.co/cDKdgZv/V8C36xl.png');
-            background-size: 200% 200%;
-            animation: wave 3s infinite alternate;
-        }
-        @keyframes wave {
-            }
-        .navbar ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-around;
-            align-items: flex-start;
-            height: 100%; 
-        }
-        .navbar li {
-            margin: 10px 15px 0;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: #ffffff;
-            font-weight: bold;
-            font-size: 20px;
-            transition: color 0.3s ease;
-        }
-        .navbar a:hover {
-            color: #6f42c1;
-        }
-        .navbar hr {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 1px;
-            background-color: #6f42c1;
-            border: none;
-            margin: 0;
-            padding: 0;
-        }
-        .content {
-            position: absolute; 
-            top: 60px; 
-            left: 0;
-            width: 100%;
-            height: calc(100vh - 60px);
-            overflow: hidden;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" crossorigin="" src="/assets/index.5ffbfe29.js"></script>
+    <link rel="stylesheet" href="/assets/index.ca7d08a2.css">
+    <title>FREEMASONRY</title>
 </head>
 <body>
-<div class="navbar">
-    <ul>
-        <li><a href="#Victims" class="">Victims</a></li>
-        <li><a href="#Projects" class="">Projects</a></li>
-        <li><a href="#Dashboard" class="active">Dashboard</a></li>
-        <li><a href="#NeptuneRat" class="">NeptuneRat</a></li>
-        <li><a href="#Rootkit" class="">Rootkit</a></li>
-    </ul>
-    <hr>
-</div>
-<div class="content">
-    <iframe id="Victims" src="https://freemasonry.cc/victims" frameborder="0" style="display: none;"></iframe>
-    <iframe id="Projects" src="https://freemasonry.cc/Projects" frameborder="0" style="display: none;"></iframe>
-    <iframe id="Dashboard" src="https://freemasonry.cc/dashboard" frameborder="0" style="display: block;"></iframe>
-    <iframe id="NeptuneRat" src="https://freemasonry.cc/NeptuneRAT" frameborder="0" style="display: none;"></iframe>
-    <iframe id="Rootkit" src="https://freemasonry.cc/r00tkit" frameborder="0" style="display: none;"></iframe>
-</div>
-<script>
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        window.location.hash = targetId;
-        document.querySelectorAll('.content iframe').forEach(iframe => {
-            iframe.style.display = 'none';
-        });
-        document.getElementById(targetId).style.display = 'block';
-        document.querySelectorAll('.navbar a').forEach(link => {
-            link.classList.remove('active');
-        });
-        this.classList.add('active');
-    });
-});
-</script>
+
+    <style>
+        @import"https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap";:root {
+    font-family: Kanit,sans-serif;
+    background-color: #2e3352;
+    color: #d0bceb;
+    user-select: none;
+    overflow: hidden
+}
+:root body {
+    animation: fadeIn 1s
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh
+}
+
+.container p {
+    width: 95%;
+    word-wrap: break-word;
+    filter: drop-shadow(0 0 10px #bd93f9);
+    font-size: 2rem;
+    font-weight: 500;
+    transition: all .5s ease
+}
+
+.container p:hover {
+    color: #f8f8f2;
+    filter: drop-shadow(0 0 20px #f8f8f2);
+    transform: scale(1.05);
+    cursor: pointer
+}
+
+.generate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.generate button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #bd93f9;
+    font-family: Kanit,sans-serif;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin: .3rem;
+    padding: .3rem;
+    filter: drop-shadow(0 0 10px #bd93f9);
+    transition: all .5s ease
+}
+
+.generate button:hover {
+    color: #f8f8f2;
+    filter: drop-shadow(0 0 20px #f8f8f2);
+    cursor: pointer
+}
+
+.generate input {
+    background-color: transparent;
+    outline: none;
+    color: #bd93f9;
+    font-family: Kanit,sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: .3rem;
+    padding: .3rem;
+    filter: drop-shadow(0 0 10px #bd93f9);
+    transition: all .5s ease
+}
+
+.generate input::placeholder {
+    color: #bd93f980;
+    opacity: .85
+}
+
+.generate input:hover {
+    color: #f8f8f2;
+    filter: drop-shadow(0 0 20px #f8f8f2);
+    cursor: pointer
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    text-align: center;
+    font-size: .8rem;
+    color: #f8f8f2;
+    transition: all .5s ease
+}
+
+.footer a {
+    filter: drop-shadow(0 0 5px #bd93f9);
+    color: #bd93f9;
+    text-decoration: none;
+    transition: all .5s ease
+}
+
+.footer a:hover {
+    color: #f8f8f2;
+    filter: drop-shadow(0 0 20px #f8f8f2)
+}
+
+.footer:hover {
+    transform: scale(1.05) skewY(-1deg)
+}
+
+.github {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #f8f8f2;
+    transition: all .5s ease
+}
+
+.github svg {
+    filter: drop-shadow(0 0 5px #bd93f9);
+    height: 2rem;
+    width: 2rem;
+    fill: #bd93f9;
+    transition: all .5s ease
+}
+
+.github svg:hover {
+    fill: #f8f8f2;
+    filter: drop-shadow(0 0 20px #f8f8f2);
+    transform: scale(1.05) skewY(-1deg)
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+    </style>
+    <div id="app">
+        <div class="container">
+            <p id="copy-content"></p>
+        </div>
+        <div class="generate" style="text-align: center;">
+            <button id="generate" style="font-size: 36px;"><strong>www.freemasonry.cc</strong></button>
+            <br>
+            <span>we  videos hacked victim footage and innovative hacking tools used by our malware group. Our arsenal includes cutting-edge penetration testing software and spyware, constantly evolving to stay ahead in the cyber threat landscape. As part of the Malware DevLabs collective, we operate under the Freemasonry banner, emphasizing our collaborative and clandestine approach to achieving cute.</span>
+        </div>
+        <div class="footer">
+            <span>Created by <a href="https://freemasonry.cc/ABOLHB" target="_blank">ABOLHB</a></span>
+          </div>
+        </div>
+    </div>
 </body></html>
