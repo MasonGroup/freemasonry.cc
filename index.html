@@ -1,11 +1,11 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/MasonGroup/masongroup.github.io/main/Freemasonry.ico?token=GHSAT0AAAAAACOMMXWAN3B7EVJ2WX4XPHJ4ZPMFIDA">
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/MasonGroup/masongroup.github.io/main/Freemasonry.ico?token=GHSAT0AAAAAACOMMXWAN3B7EVJ2WX4XPHJ4ZPMFIDA">
-      <link rel="icon">
-      <meta property="og:title" content="MasonWebSite - Overview"><meta property="og:description" content="We hereby declare that we disclaim any liability for any improper use of the software Thank you for your understanding"><meta property="og:image" content="https://i.ibb.co/8MBwKgd/Free-Mason.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="1200"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Freemasonry</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -74,7 +74,8 @@
 <div class="navbar">
     <ul>
         <li><a href="#Victims" class="">Victims</a></li>
-        <li><a href="#Projects" class="active">Projects</a></li>
+        <li><a href="#Projects" class="">Projects</a></li>
+        <li><a href="#Dashboard" class="active">Dashboard</a></li>
         <li><a href="#NeptuneRat" class="">NeptuneRat</a></li>
         <li><a href="#Rootkit" class="">Rootkit</a></li>
     </ul>
@@ -82,7 +83,8 @@
 </div>
 <div class="content">
     <iframe id="Victims" src="https://freemasonry.cc/victims" frameborder="0" style="display: none;"></iframe>
-    <iframe id="Projects" src="https://freemasonry.cc/Projects" frameborder="0" style="display: block;"></iframe>
+    <iframe id="Projects" src="https://freemasonry.cc/Projects" frameborder="0" style="display: none;"></iframe>
+    <iframe id="Dashboard" src="https://freemasonry.cc/dashboard" frameborder="0" style="display: block;"></iframe>
     <iframe id="NeptuneRat" src="https://freemasonry.cc/NeptuneRAT" frameborder="0" style="display: none;"></iframe>
     <iframe id="Rootkit" src="https://freemasonry.cc/r00tkit" frameborder="0" style="display: none;"></iframe>
 </div>
@@ -90,10 +92,11 @@
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        window.location.hash = targetId;
         document.querySelectorAll('.content iframe').forEach(iframe => {
             iframe.style.display = 'none';
         });
-        const targetId = this.getAttribute('href').substring(1);
         document.getElementById(targetId).style.display = 'block';
         document.querySelectorAll('.navbar a').forEach(link => {
             link.classList.remove('active');
@@ -102,5 +105,6 @@ document.querySelectorAll('.navbar a').forEach(link => {
     });
 });
 </script>
+
 
 </body></html>
